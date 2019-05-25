@@ -18,6 +18,11 @@
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Service\" />
-    <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Notepage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

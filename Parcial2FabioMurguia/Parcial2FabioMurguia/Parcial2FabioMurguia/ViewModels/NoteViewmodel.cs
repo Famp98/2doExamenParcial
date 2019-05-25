@@ -85,23 +85,15 @@ namespace Parcial2FabioMurguia.ViewModels
             {
                 if (String.IsNullOrEmpty(Email))
                 {
-                    await App.Current.MainPage.DisplayAlert("Email empty",
-                                    "Please enter your email",
-                                    "Accept");
+                    
                     return;
                 }
-                if (String.IsNullOrEmpty(Password))
-                {
-                    await App.Current.MainPage.DisplayAlert("Password empty",
-                                    "Please enter your password",
-                                    "Accept");
-                    return;
-                }
+                
 
                 IsRunning = true;
                 IsEnabled = false;
 
-                var conexion = await this.apiService.CheckConnection();
+                var conexion = this.apiService.CheckConnection();
                 if (!conexion.IsSuccess)
                 {
                     this.IsRunning = false;
@@ -145,7 +137,7 @@ namespace Parcial2FabioMurguia.ViewModels
                 mainViewModel.Token = token.AccessToken;
                 mainViewModel.TokenType = token.TokenType;
 
-                Application.Current.MainPage = new NavigationPage(new ProductPage());
+                Application.Current.MainPage = new NavigationPage(new Notepage());
                 IsRunning = false;
                 IsEnabled = true;
             }

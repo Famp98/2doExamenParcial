@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Parcial2FabioMurguia.Models
+﻿namespace Parcial2FabioMurguia.Models
 {
-   
-        using System;
-    using System.ComponentModel.DataAnnotations;
+
+    using System;
 
     public class Notes
     {

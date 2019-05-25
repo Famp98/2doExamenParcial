@@ -3,10 +3,56 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Parcial2FabioMurguia.Views.Notepage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <ScrollView>
+            <StackLayout
+                Padding="15"
+                BackgroundColor="White"
+                
+                <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2"/>
+                </Grid.ColumnDefinitions>
+                    
+                </Grid>
+
+                <Label
+                        
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Nota:"
+                        TextColor="Black">
+
+                </Label>
+
+                <Entry    
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Placeholder="Ingrese su nota"
+                    Text="{Binding Nota, Mode=TwoWay}"
+                    >
+                    
+                </Entry>
+                <Grid/>
+
+                <ActivityIndicator>
+                    
+                </ActivityIndicator>
+
+                <Button
+                    BackgroundColor="Green"
+                    Text="Insertar"
+                    TextColor="Black"
+                    >
+                    
+                </Button>          
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

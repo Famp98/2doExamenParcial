@@ -9,7 +9,7 @@ namespace Parcial2FabioMurguia.ViewModels
         using GalaSoft.MvvmLight.Command;
         using System;
         using System.Windows.Input;
-        using Services;
+        using Service;
         using Xamarin.Forms;
         using Models;
         using Views;
